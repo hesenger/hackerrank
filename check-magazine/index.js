@@ -1,6 +1,3 @@
-const YES = "Yes";
-const NO = "No";
-
 /*
  * Complete the 'checkMagazine' function below.
  *
@@ -21,11 +18,13 @@ function checkMagazine(magazine, note) {
     return memo;
   }, {});
 
-  return Object.entries(noteStacks).every(([word, value]) => {
-    return magazineStacks[word] >= value;
-  })
-    ? YES
-    : NO;
+  console.log(
+    Object.entries(noteStacks).every(([word, value]) => {
+      return magazineStacks[word] >= value;
+    })
+      ? "Yes"
+      : "No",
+  );
 }
 
 module.exports = checkMagazine;
